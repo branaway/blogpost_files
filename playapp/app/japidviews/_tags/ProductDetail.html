@@ -1,7 +1,6 @@
-`import s.*
-`args Product product
-`trim off
+~(s.Product product)
+
 <div class="product">
 	<img src="${product.getName()}.jpg" />
-	<span class="productname">${product.getName()}</span>, <span class="price">$${product.getPrice()}</span>
+	<span class="productname">$product.getName()</span>, <span class="price">$$product.getPrice()</span>
 </div>

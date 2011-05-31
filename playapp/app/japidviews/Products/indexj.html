@@ -1,15 +1,15 @@
 `import s.*
-`args List<Product> products
-`extends main
-`set title:"Product listing"
-`set pagename: "Product listing"
-`trim on
+~(List<Product> products)
+`extends main("Product listing", "Product listing")
+
 <table>
     `for (Product product:products) {
         <tr>
             <td>`t ProductDetail(product)`</td>
             <td>
-                `for(Category category: product.getCategories()){` ${category.getName()}, `}
+                `for(Category category: product.getCategories()){
+				    $category.getName(), 
+				`}
             </td>
         </tr>
     `}
